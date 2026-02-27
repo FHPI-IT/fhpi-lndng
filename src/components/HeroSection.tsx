@@ -16,10 +16,11 @@ const HeroSection = () => {
           <p className="text-secondary font-body font-semibold tracking-widest uppercase text-sm mb-4 animate-fade-in-up">
             Philippines' Finest Produce
           </p>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            Fresh Harvest
+          <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+            <span style={{ color: "#109a48" }}>Fresh</span>{" "}
+            <span style={{ color: "#14224a" }}>Harvest</span>
             <br />
-            <span className="text-secondary">Philippines</span>
+            <span style={{ color: "#faf9f5" }}>Philippines</span>
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 font-body leading-relaxed max-w-lg mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             Committed to quality, sustainability, and strong partnerships with local farmers — delivering the freshest Cavendish bananas, golden pineapples, and more.
@@ -27,7 +28,8 @@ const HeroSection = () => {
           <div className="animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
             <a
               href="#products"
-              className="inline-block bg-secondary text-secondary-foreground font-body font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
+              className="inline-block font-body font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: "#109a48", color: "#faf9f5" }}
             >
               Explore Our Products
             </a>
