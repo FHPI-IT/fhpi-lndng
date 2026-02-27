@@ -1,10 +1,11 @@
 import { Apple, Citrus, Cherry, Flower2 } from "lucide-react";
+import durianIcon from "@/assets/durian-icon.png";
 
 const fruits = [
   { name: "Cavendish Banana", emoji: "🍌" },
   { name: "Fresh Pineapple", emoji: "🍍" },
   { name: "Papaya", emoji: "🥭" },
-  { name: "Durian", emoji: "🍈" },
+  { name: "Durian", emoji: "", icon: durianIcon },
   { name: "Apple", emoji: "🍎" },
 ];
 
@@ -14,9 +15,9 @@ const spices = [
   { name: "Onion", emoji: "🧅" },
 ];
 
-const ProductCard = ({ name, emoji }: { name: string; emoji: string }) => (
+const ProductCard = ({ name, emoji, icon }: { name: string; emoji: string; icon?: string }) => (
   <div className="group bg-background rounded-xl border border-border p-6 flex items-center gap-4 hover:shadow-lg hover:border-primary/30 transition-all cursor-default">
-    <span className="text-4xl">{emoji}</span>
+    {icon ? <img src={icon} alt={name} className="w-10 h-10 object-contain" /> : <span className="text-4xl">{emoji}</span>}
     <span className="font-body font-semibold text-foreground text-lg group-hover:text-primary transition-colors">{name}</span>
   </div>
 );
