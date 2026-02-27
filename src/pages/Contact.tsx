@@ -39,7 +39,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground mb-1">Location</h3>
-                  <p className="text-muted-foreground font-body">Philippines</p>
+                  <p className="text-muted-foreground font-body">2F Unit 5, Matina Town Square, MacArthur Highway, Matina, Davao City, 8000, Philippines</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -48,8 +48,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground font-body">info@freshharvestphil.com</p>
-                  <p className="text-muted-foreground font-body">info@freshharvestph.com</p>
+                  <p className="text-muted-foreground font-body">rsensano@freshharvestphil.com
+                  </p>
+                  <p className="text-muted-foreground font-body">info@fresh</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -58,7 +59,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground mb-1">Phone</h3>
-                  <p className="text-muted-foreground font-body">Contact us via email</p>
+                  <p className="text-muted-foreground font-body">+63 917 790 1184</p>
                 </div>
               </div>
             </div>
@@ -87,8 +88,7 @@ const Contact = () => {
         </div>
       </main>
       <Footer />
-    </div>
-  );
+    </div>);
 };
 
 export default Contact;
