@@ -17,10 +17,10 @@ const HeroSection = () => {
             Philippines' Finest Produce
           </p>
           <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            <span style={{ color: "#109a48" }}>Fresh</span>{" "}
-            <span style={{ color: "#14224a" }}>Harvest</span>
+            <span style={{ color: "#faf9f5" }} /*109a48 - green*/>Fresh</span>{" "}
+            <span style={{ color: "#faf9f5" }} /*14224a - dark blue*/>Harvest</span>
             <br />
-            <span style={{ color: "#faf9f5" }}>Philippines</span>
+            <span style={{ color: "#e8b130" }} /*faf9f5 - white*/>Philippines</span>
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 font-body leading-relaxed max-w-lg mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             Committed to quality, sustainability, and strong partnerships with local farmers — delivering the freshest Cavendish bananas, golden pineapples, and more.
@@ -29,7 +29,7 @@ const HeroSection = () => {
             <a
               href="#products"
               className="inline-block font-body font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: "#109a48", color: "#faf9f5" }}
+              style={{ backgroundColor: "#e8b130", color: "#1f1f1f" }} // 109a48 - green, faf9f5 - white
             >
               Explore Our Products
             </a>
