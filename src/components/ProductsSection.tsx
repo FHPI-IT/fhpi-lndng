@@ -3,13 +3,14 @@ import durianIcon from "@/assets/durian-icon.png";
 import papayaIcon from "@/assets/papaya-icon.png";
 import bananaIcon from "@/assets/banana-icon.png";
 import pineappleIcon from "@/assets/pineapple-icon.png";
+import appleIcon from "@/assets/apple-icon.png";
 
 const fruits = [
   { name: "Cavendish Banana", emoji: "", icon: bananaIcon },
   { name: "Fresh Pineapple", emoji: "", icon: pineappleIcon },
   { name: "Papaya", emoji: "", icon: papayaIcon },
   { name: "Durian", emoji: "", icon: durianIcon },
-  { name: "Apple", emoji: "🍎" },
+  { name: "Apple", emoji: "", icon: appleIcon },
 ];
 
 const spices = [
