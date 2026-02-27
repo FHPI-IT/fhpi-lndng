@@ -1,10 +1,11 @@
 import { Apple, Citrus, Cherry, Flower2 } from "lucide-react";
 import durianIcon from "@/assets/durian-icon.png";
+import papayaIcon from "@/assets/papaya-icon.png";
 
 const fruits = [
   { name: "Cavendish Banana", emoji: "🍌" },
   { name: "Fresh Pineapple", emoji: "🍍" },
-  { name: "Papaya", emoji: "🥭" },
+  { name: "Papaya", emoji: "", icon: papayaIcon },
   { name: "Durian", emoji: "", icon: durianIcon },
   { name: "Apple", emoji: "🍎" },
 ];
