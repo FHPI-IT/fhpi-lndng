@@ -1,4 +1,5 @@
-import { Apple, Citrus, Cherry, Flower2 } from "lucide-react";
+import { Apple, Flower2 } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import durianIcon from "@/assets/durian-icon.png";
 import papayaIcon from "@/assets/papaya-icon.png";
 import bananaIcon from "@/assets/banana-icon.png";
@@ -19,14 +20,20 @@ const spices = [
   { name: "Onion", emoji: "🧅" },
 ];
 
-const ProductCard = ({ name, emoji, icon }: { name: string; emoji: string; icon?: string }) => (
-  <div className="group bg-background rounded-xl border border-border p-6 flex items-center gap-4 hover:shadow-lg hover:border-primary/30 transition-all cursor-default">
+const ProductCard = ({ name, emoji, icon, isVisible, delay }: { name: string; emoji: string; icon?: string; isVisible: boolean; delay: number }) => (
+  <div
+    className={`group bg-background rounded-xl border border-border p-6 flex items-center gap-4 hover:shadow-lg hover:border-primary/30 transition-all duration-500 ease-out cursor-default ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+    style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
+  >
     {icon ? <img src={icon} alt={name} className="w-10 h-10 object-contain" /> : <span className="text-4xl">{emoji}</span>}
     <span className="font-body font-semibold text-foreground text-lg group-hover:text-primary transition-colors">{name}</span>
   </div>
 );
 
 const ProductsSection = () => {
+  const { ref: fruitsRef, isVisible: fruitsVisible } = useScrollReveal();
+  const { ref: spicesRef, isVisible: spicesVisible } = useScrollReveal();
+
   return (
     <section id="products" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -41,30 +48,30 @@ const ProductsSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto space-y-12">
-          <div>
-            <h3 className="font-display text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+          <div ref={fruitsRef}>
+            <h3 className={`font-display text-2xl font-semibold text-foreground mb-6 flex items-center gap-3 transition-all duration-500 ease-out ${fruitsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary/20">
                 <Apple className="w-5 h-5 text-secondary" />
               </span>
               Fruits
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {fruits.map((f) => (
-                <ProductCard key={f.name} {...f} />
+              {fruits.map((f, i) => (
+                <ProductCard key={f.name} {...f} isVisible={fruitsVisible} delay={100 + i * 100} />
               ))}
             </div>
           </div>
 
-          <div>
-            <h3 className="font-display text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+          <div ref={spicesRef}>
+            <h3 className={`font-display text-2xl font-semibold text-foreground mb-6 flex items-center gap-3 transition-all duration-500 ease-out ${spicesVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
                 <Flower2 className="w-5 h-5 text-primary" />
               </span>
               Spices
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {spices.map((s) => (
-                <ProductCard key={s.name} {...s} />
+              {spices.map((s, i) => (
+                <ProductCard key={s.name} {...s} isVisible={spicesVisible} delay={100 + i * 100} />
               ))}
             </div>
           </div>
