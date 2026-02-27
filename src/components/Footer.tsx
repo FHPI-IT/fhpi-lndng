@@ -23,8 +23,8 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="font-display font-semibold text-lg mb-4">Get in Touch</h4>
-            <p className="text-primary-foreground/70 font-body leading-relaxed">
-              Philippines
+            <p className="text-primary-foreground/70 font-body leading-relaxed">Philippines
+info@freshharvestphil.com
               <br />
               info@freshharvestph.com
             </p>
@@ -34,8 +34,8 @@ const Footer = () => {
           © {new Date().getFullYear()} Fresh Harvest Philippines, Inc. All rights reserved.
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
