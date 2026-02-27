@@ -24,9 +24,8 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-4">Get in Touch</h4>
             <p className="text-primary-foreground/70 font-body leading-relaxed">Philippines
-info@freshharvestphil.com
               <br />
-              info@freshharvestph.com
+              rsensano@freshharvestphil.com
             </p>
           </div>
         </div>
