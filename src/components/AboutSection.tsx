@@ -1,4 +1,5 @@
 import { Sprout, Handshake, Award } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const values = [
   {
@@ -19,9 +20,11 @@ const values = [
 ];
 
 const AboutSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
     <section id="about" className="py-24 bg-card">
-      <div className="container mx-auto px-4">
+      <div ref={ref} className={`container mx-auto px-4 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-secondary font-body font-semibold tracking-widest uppercase text-sm mb-3">Our Mission</p>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
@@ -32,8 +35,12 @@ const AboutSection = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {values.map((item) => (
-            <div key={item.title} className="bg-background rounded-xl p-8 text-center border border-border hover:shadow-lg transition-shadow">
+          {values.map((item, i) => (
+            <div
+              key={item.title}
+              className={`bg-background rounded-xl p-8 text-center border border-border hover:shadow-lg transition-all duration-500 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: isVisible ? `${i * 150}ms` : "0ms" }}
+            >
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-5">
                 <item.icon className="w-7 h-7 text-primary" />
               </div>
