@@ -50,7 +50,8 @@ const Contact = () => {
                   <h3 className="font-display font-semibold text-foreground mb-1">Email</h3>
                   <p className="text-muted-foreground font-body">rsensano@freshharvestphil.com
                   </p>
-                  <p className="text-muted-foreground font-body">info@fresh</p>
+                  <p className="text-muted-foreground font-body">
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -88,7 +89,6 @@ const Contact = () => {
         </div>
       </main>
       <Footer />
-    </div>);
-};
+    </div>);};
 
 export default Contact;
