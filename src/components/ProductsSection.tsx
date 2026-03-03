@@ -26,7 +26,7 @@ interface Product {
 }
 
 const fruits: Product[] = [
-  { name: "Fresh Cavendish Bananas", emoji: "", icon: bananaIcon, category: "Fresh Fruit", badge: "Signature Product", description: "The world's most beloved banana variety — grown in the fertile Philippine lowlands and processed with precision for peak shelf life and flavor. Our Cavendish bananas are harvested at optimal green maturity, ensuring maximum shelf life for both domestic and export markets.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Cavendish (AAA)", grade: "Grade A / Export Quality", harvestStage: "Green Mature", packaging: "18 kg Carton Box", tags: ["No pesticide residue", "Cold chain handled", "Consistent sizing", "Export certified"], bgColor: "#f5c518" },
+  { name: "Cavendish Bananas", emoji: "", icon: bananaIcon, category: "Fresh Fruit", badge: "Signature Product", description: "The world's most beloved banana variety — grown in the fertile Philippine lowlands and processed with precision for peak shelf life and flavor. Our Cavendish bananas are harvested at optimal green maturity, ensuring maximum shelf life for both domestic and export markets.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Cavendish (AAA)", grade: "Grade A / Export Quality", harvestStage: "Green Mature", packaging: "13 kg & 3 kg Carton Box", tags: ["No pesticide residue", "Cold chain handled", "Consistent sizing", "Export certified"], bgColor: "#f5c518" },
   { name: "Fresh Pineapple", emoji: "", icon: pineappleIcon, category: "Fresh Fruit", description: "Philippine pineapples are prized for their exceptional sweetness and juiciness. Grown in the tropical highlands, they offer a perfect balance of tangy and sweet flavors.", origin: "Bukidnon & South Cotabato", season: "Year-round", variety: "MD2 / Sweet Gold", grade: "Grade A", harvestStage: "Ripe Mature", packaging: "10 kg Carton Box", tags: ["Naturally sweet", "Rich in Vitamin C", "Export quality", "Farm fresh"], bgColor: "#e8a317" },
   { name: "Papaya", emoji: "", icon: papayaIcon, category: "Fresh Fruit", description: "Philippine papayas are naturally sweet with vibrant orange flesh, packed with vitamins A and C. Perfect for fresh eating, smoothies, or as a natural meat tenderizer.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Solo / Red Lady", grade: "Grade A", harvestStage: "Turning Stage", packaging: "12 kg Carton Box", tags: ["Rich in enzymes", "Naturally ripened", "Consistent quality"], bgColor: "#f4a259" },
   { name: "Durian", emoji: "", icon: durianIcon, category: "Fresh Fruit", badge: "Premium", description: "Known as the 'King of Fruits,' Philippine durian from Davao is famous for its rich, custard-like flesh and distinctive aroma. A delicacy sought after across Asia.", origin: "Davao Region", season: "Aug–Oct & Dec–Feb", variety: "Puyat / Arancillo", grade: "Premium Grade", harvestStage: "Naturally Fallen", packaging: "Per piece / Crate", tags: ["Hand-selected", "Peak ripeness", "Davao origin"], bgColor: "#8b9a46" },
@@ -180,7 +180,7 @@ const ProductsSection = () => {
                   Available Now · {selectedProduct?.grade || 'Premium'}
                 </div>
                 <a
-                  href="#contact"
+                  href="/contact"
                   onClick={() => setSelectedProduct(null)}
                   className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold transition-colors"
                   style={{ backgroundColor: '#109a48', color: '#faf9f5' }}
