@@ -16,6 +16,8 @@ import gingerPhoto from "@/assets/ginger-photo.png";
 import garlicPhoto from "@/assets/garlic-photo.png";
 import onionPhoto from "@/assets/onion-photo.png";
 
+import cavendishBanana from "@/assets/cavendish-banana.png";
+
 interface Product {
   name: string;
   emoji: string;
