@@ -7,7 +7,7 @@ import papayaIcon from "@/assets/papaya-icon.png";
 import bananaIcon from "@/assets/banana-icon.png";
 import pineappleIcon from "@/assets/pineapple-icon.png";
 import appleIcon from "@/assets/apple-icon.png";
-import bananaPhoto from "@/assets/banana-photo.png";
+import bananaPhoto from "@/assets/cavendish-banana.jpg";
 import pineapplePhoto from "@/assets/pineapple-photo.png";
 import papayaPhoto from "@/assets/papaya-photo.png";
 import durianPhoto from "@/assets/durian-photo.png";
