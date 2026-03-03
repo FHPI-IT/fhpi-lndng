@@ -20,15 +20,15 @@ interface Product {
 const fruits: Product[] = [
   { name: "Cavendish Banana", emoji: "", icon: bananaIcon, description: "The Philippines is one of the world's top exporters of Cavendish bananas, known for their consistent sweetness, creamy texture, and rich potassium content.", origin: "Mindanao, Philippines", season: "Year-round" },
   { name: "Fresh Pineapple", emoji: "", icon: pineappleIcon, description: "Philippine pineapples are prized for their exceptional sweetness and juiciness. Grown in the tropical highlands, they offer a perfect balance of tangy and sweet flavors.", origin: "Bukidnon & South Cotabato", season: "Year-round" },
-  { name: "Papaya", emoji: "", icon: papayaIcon, description: "Philippine papayas are naturally sweet with vibrant orange flesh, packed with vitamins A and C. Perfect for fresh eating, smoothies, or as a natural meat tenderizer.", origin: "Cavite & Laguna", season: "Year-round" },
-  { name: "Durian", emoji: "", icon: durianIcon, description: "Known as the 'King of Fruits,' Philippine durian from Davao is famous for its rich, custard-like flesh and distinctive aroma. A delicacy sought after across Asia.", origin: "Davao Region", season: "August – November" },
+  { name: "Papaya", emoji: "", icon: papayaIcon, description: "Philippine papayas are naturally sweet with vibrant orange flesh, packed with vitamins A and C. Perfect for fresh eating, smoothies, or as a natural meat tenderizer.", origin: "Mindanao, Philippines", season: "Year-round" },
+  { name: "Durian", emoji: "", icon: durianIcon, description: "Known as the 'King of Fruits,' Philippine durian from Davao is famous for its rich, custard-like flesh and distinctive aroma. A delicacy sought after across Asia.", origin: "Davao Region", season: "August – October & December - February" },
   { name: "Apple", emoji: "", icon: appleIcon, description: "Carefully selected premium apples sourced and distributed for the Philippine market, offering crisp texture and refreshing sweetness.", origin: "Imported & Distributed", season: "Year-round" },
 ];
 
 const spices: Product[] = [
-  { name: "Ginger", emoji: "🫚", description: "Philippine ginger is renowned for its intense, spicy-sweet flavor. Used widely in cooking, beverages, and traditional medicine.", origin: "Iloilo & Mindoro", season: "Year-round" },
-  { name: "Garlic", emoji: "🧄", description: "Locally grown Philippine garlic is smaller but more pungent than imported varieties, delivering a robust flavor essential to Filipino cuisine.", origin: "Ilocos Region", season: "January – March" },
-  { name: "Onion", emoji: "🧅", description: "Philippine red and white onions add depth and aroma to dishes. Sourced from top-producing regions, they are a kitchen staple nationwide.", origin: "Nueva Ecija", season: "January – April" },
+  { name: "Ginger", emoji: "🫚", description: "Philippine ginger is renowned for its intense, spicy-sweet flavor. Used widely in cooking, beverages, and traditional medicine.", origin: "Mindanao, Philippines", season: "Year-round" },
+  { name: "Garlic", emoji: "🧄", description: "Locally grown Philippine garlic is smaller but more pungent than imported varieties, delivering a robust flavor essential to Filipino cuisine.", origin: "Mindanao, Philippines", season: "January – March" },
+  { name: "Onion", emoji: "🧅", description: "Philippine red and white onions add depth and aroma to dishes. Sourced from top-producing regions, they are a kitchen staple nationwide.", origin: "Mindanao, Philippines", season: "January – April" },
 ];
 
 const ProductCard = ({ product, isVisible, delay, onClick }: { product: Product; isVisible: boolean; delay: number; onClick: () => void }) => (
