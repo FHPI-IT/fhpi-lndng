@@ -7,6 +7,14 @@ import papayaIcon from "@/assets/papaya-icon.png";
 import bananaIcon from "@/assets/banana-icon.png";
 import pineappleIcon from "@/assets/pineapple-icon.png";
 import appleIcon from "@/assets/apple-icon.png";
+import bananaPhoto from "@/assets/banana-photo.png";
+import pineapplePhoto from "@/assets/pineapple-photo.png";
+import papayaPhoto from "@/assets/papaya-photo.png";
+import durianPhoto from "@/assets/durian-photo.png";
+import applePhoto from "@/assets/apple-photo.png";
+import gingerPhoto from "@/assets/ginger-photo.png";
+import garlicPhoto from "@/assets/garlic-photo.png";
+import onionPhoto from "@/assets/onion-photo.png";
 
 interface Product {
   name: string;
@@ -23,20 +31,21 @@ interface Product {
   packaging?: string;
   tags?: string[];
   bgColor: string;
+  photo?: string;
 }
 
 const fruits: Product[] = [
-  { name: "Cavendish Bananas", emoji: "", icon: bananaIcon, category: "Fresh Fruit", badge: "Signature Product", description: "The world's most beloved banana variety — grown in the fertile Philippine lowlands and processed with precision for peak shelf life and flavor. Our Cavendish bananas are harvested at optimal green maturity, ensuring maximum shelf life for both domestic and export markets.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Cavendish (AAA)", grade: "Grade A / Export Quality", harvestStage: "Green Mature", packaging: "13 kg & 3 kg Carton Box", tags: ["No pesticide residue", "Cold chain handled", "Consistent sizing", "Export certified"], bgColor: "#f5c518" },
-  { name: "Fresh Pineapple", emoji: "", icon: pineappleIcon, category: "Fresh Fruit", description: "Philippine pineapples are prized for their exceptional sweetness and juiciness. Grown in the tropical highlands, they offer a perfect balance of tangy and sweet flavors.", origin: "Bukidnon & South Cotabato", season: "Year-round", variety: "MD2 / Sweet Gold", grade: "Grade A", harvestStage: "Ripe Mature", packaging: "10 kg Carton Box", tags: ["Naturally sweet", "Rich in Vitamin C", "Export quality", "Farm fresh"], bgColor: "#e8a317" },
-  { name: "Papaya", emoji: "", icon: papayaIcon, category: "Fresh Fruit", description: "Philippine papayas are naturally sweet with vibrant orange flesh, packed with vitamins A and C. Perfect for fresh eating, smoothies, or as a natural meat tenderizer.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Solo / Red Lady", grade: "Grade A", harvestStage: "Turning Stage", packaging: "12 kg Carton Box", tags: ["Rich in enzymes", "Naturally ripened", "Consistent quality"], bgColor: "#f4a259" },
-  { name: "Durian", emoji: "", icon: durianIcon, category: "Fresh Fruit", badge: "Premium", description: "Known as the 'King of Fruits,' Philippine durian from Davao is famous for its rich, custard-like flesh and distinctive aroma. A delicacy sought after across Asia.", origin: "Davao Region", season: "Aug–Oct & Dec–Feb", variety: "Puyat / Arancillo", grade: "Premium Grade", harvestStage: "Naturally Fallen", packaging: "Per piece / Crate", tags: ["Hand-selected", "Peak ripeness", "Davao origin"], bgColor: "#8b9a46" },
-  { name: "Apple", emoji: "", icon: appleIcon, category: "Imported Fruit", description: "Carefully selected premium apples sourced and distributed for the Philippine market, offering crisp texture and refreshing sweetness.", origin: "Imported & Distributed", season: "Year-round", variety: "Fuji / Gala", grade: "Grade A", packaging: "20 kg Carton Box", tags: ["Premium imported", "Cold storage", "Consistent supply"], bgColor: "#c94c4c" },
+  { name: "Cavendish Bananas", emoji: "", icon: bananaIcon, photo: bananaPhoto, category: "Fresh Fruit", badge: "Signature Product", description: "The world's most beloved banana variety — grown in the fertile Philippine lowlands and processed with precision for peak shelf life and flavor. Our Cavendish bananas are harvested at optimal green maturity, ensuring maximum shelf life for both domestic and export markets.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Cavendish (AAA)", grade: "Grade A / Export Quality", harvestStage: "Green Mature", packaging: "13 kg & 3 kg Carton Box", tags: ["No pesticide residue", "Cold chain handled", "Consistent sizing", "Export certified"], bgColor: "#f5c518" },
+  { name: "Fresh Pineapple", emoji: "", icon: pineappleIcon, photo: pineapplePhoto, category: "Fresh Fruit", description: "Philippine pineapples are prized for their exceptional sweetness and juiciness. Grown in the tropical highlands, they offer a perfect balance of tangy and sweet flavors.", origin: "Bukidnon & South Cotabato", season: "Year-round", variety: "MD2 / Sweet Gold", grade: "Grade A", harvestStage: "Ripe Mature", packaging: "10 kg Carton Box", tags: ["Naturally sweet", "Rich in Vitamin C", "Export quality", "Farm fresh"], bgColor: "#e8a317" },
+  { name: "Papaya", emoji: "", icon: papayaIcon, photo: papayaPhoto, category: "Fresh Fruit", description: "Philippine papayas are naturally sweet with vibrant orange flesh, packed with vitamins A and C. Perfect for fresh eating, smoothies, or as a natural meat tenderizer.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Solo / Red Lady", grade: "Grade A", harvestStage: "Turning Stage", packaging: "12 kg Carton Box", tags: ["Rich in enzymes", "Naturally ripened", "Consistent quality"], bgColor: "#f4a259" },
+  { name: "Durian", emoji: "", icon: durianIcon, photo: durianPhoto, category: "Fresh Fruit", badge: "Premium", description: "Known as the 'King of Fruits,' Philippine durian from Davao is famous for its rich, custard-like flesh and distinctive aroma. A delicacy sought after across Asia.", origin: "Davao Region", season: "Aug–Oct & Dec–Feb", variety: "Puyat / Arancillo", grade: "Premium Grade", harvestStage: "Naturally Fallen", packaging: "Per piece / Crate", tags: ["Hand-selected", "Peak ripeness", "Davao origin"], bgColor: "#8b9a46" },
+  { name: "Apple", emoji: "", icon: appleIcon, photo: applePhoto, category: "Imported Fruit", description: "Carefully selected premium apples sourced and distributed for the Philippine market, offering crisp texture and refreshing sweetness.", origin: "Imported & Distributed", season: "Year-round", variety: "Fuji / Gala", grade: "Grade A", packaging: "20 kg Carton Box", tags: ["Premium imported", "Cold storage", "Consistent supply"], bgColor: "#c94c4c" },
 ];
 
 const spices: Product[] = [
-  { name: "Ginger", emoji: "🫚", category: "Spice", description: "Philippine ginger is renowned for its intense, spicy-sweet flavor. Used widely in cooking, beverages, and traditional medicine.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Yellow Ginger", grade: "Grade A", packaging: "20 kg Mesh Bag", tags: ["Organically grown", "High gingerol content", "Fresh harvest"], bgColor: "#d4a953" },
-  { name: "Garlic", emoji: "🧄", category: "Spice", description: "Locally grown Philippine garlic is smaller but more pungent than imported varieties, delivering a robust flavor essential to Filipino cuisine.", origin: "Mindanao, Philippines", season: "January – March", variety: "Native White", grade: "Grade A", packaging: "10 kg Mesh Bag", tags: ["Locally sourced", "Strong aroma", "Sun-dried"], bgColor: "#e8dcc8" },
-  { name: "Onion", emoji: "🧅", category: "Spice", description: "Philippine red and white onions add depth and aroma to dishes. Sourced from top-producing regions, they are a kitchen staple nationwide.", origin: "Mindanao, Philippines", season: "January – April", variety: "Red Creole / White", grade: "Grade A", packaging: "25 kg Mesh Bag", tags: ["Farm direct", "Consistent sizing", "Fresh harvest"], bgColor: "#a8516e" },
+  { name: "Ginger", emoji: "🫚", photo: gingerPhoto, category: "Spice", description: "Philippine ginger is renowned for its intense, spicy-sweet flavor. Used widely in cooking, beverages, and traditional medicine.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Yellow Ginger", grade: "Grade A", packaging: "20 kg Mesh Bag", tags: ["Organically grown", "High gingerol content", "Fresh harvest"], bgColor: "#d4a953" },
+  { name: "Garlic", emoji: "🧄", photo: garlicPhoto, category: "Spice", description: "Locally grown Philippine garlic is smaller but more pungent than imported varieties, delivering a robust flavor essential to Filipino cuisine.", origin: "Mindanao, Philippines", season: "January – March", variety: "Native White", grade: "Grade A", packaging: "10 kg Mesh Bag", tags: ["Locally sourced", "Strong aroma", "Sun-dried"], bgColor: "#e8dcc8" },
+  { name: "Onion", emoji: "🧅", photo: onionPhoto, category: "Spice", description: "Philippine red and white onions add depth and aroma to dishes. Sourced from top-producing regions, they are a kitchen staple nationwide.", origin: "Mindanao, Philippines", season: "January – April", variety: "Red Creole / White", grade: "Grade A", packaging: "25 kg Mesh Bag", tags: ["Farm direct", "Consistent sizing", "Fresh harvest"], bgColor: "#a8516e" },
 ];
 
 const ProductCard = ({ product, isVisible, delay, onClick }: { product: Product; isVisible: boolean; delay: number; onClick: () => void }) => (
@@ -105,7 +114,9 @@ const ProductsSection = () => {
                   {selectedProduct.badge}
                 </span>
               )}
-              {selectedProduct?.icon ? (
+              {selectedProduct?.photo ? (
+                <img src={selectedProduct.photo} alt={selectedProduct.name} className="w-40 h-40 sm:w-52 sm:h-52 object-contain drop-shadow-lg" />
+              ) : selectedProduct?.icon ? (
                 <img src={selectedProduct.icon} alt={selectedProduct.name} className="w-32 h-32 sm:w-44 sm:h-44 object-contain drop-shadow-lg" />
               ) : (
                 <span className="text-8xl">{selectedProduct?.emoji}</span>
