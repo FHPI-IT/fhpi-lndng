@@ -7,7 +7,7 @@ import papayaIcon from "@/assets/papaya-icon.png";
 import bananaIcon from "@/assets/banana-icon.png";
 import pineappleIcon from "@/assets/pineapple-icon.png";
 import appleIcon from "@/assets/apple-icon.png";
-import bananaPhoto from "@/assets/banana-photo.png";
+import bananaPhoto from "@/assets/cavendish-banana.jpg";
 import pineapplePhoto from "@/assets/pineapple-photo.png";
 import papayaPhoto from "@/assets/papaya-photo.png";
 import durianPhoto from "@/assets/durian-photo.png";
@@ -116,8 +116,8 @@ const ProductsSection = () => {
                   {selectedProduct.badge}
                 </span>
               )}
-              {selectedProduct?.photo ? (
-                <img src={selectedProduct.photo} alt={selectedProduct.name} className="w-40 h-40 sm:w-52 sm:h-52 object-contain drop-shadow-lg" />
+            {selectedProduct?.photo ? (
+                <img src={selectedProduct.photo} alt={selectedProduct.name} className="absolute inset-0 w-full h-full object-cover" />
               ) : selectedProduct?.icon ? (
                 <img src={selectedProduct.icon} alt={selectedProduct.name} className="w-32 h-32 sm:w-44 sm:h-44 object-contain drop-shadow-lg" />
               ) : (
