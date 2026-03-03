@@ -114,8 +114,8 @@ const ProductsSection = () => {
                   {selectedProduct.badge}
                 </span>
               )}
-              {selectedProduct?.photo ? (
-                <img src={selectedProduct.photo} alt={selectedProduct.name} className="w-40 h-40 sm:w-52 sm:h-52 object-contain drop-shadow-lg" />
+            {selectedProduct?.photo ? (
+                <img src={selectedProduct.photo} alt={selectedProduct.name} className="absolute inset-0 w-full h-full object-cover" />
               ) : selectedProduct?.icon ? (
                 <img src={selectedProduct.icon} alt={selectedProduct.name} className="w-32 h-32 sm:w-44 sm:h-44 object-contain drop-shadow-lg" />
               ) : (
