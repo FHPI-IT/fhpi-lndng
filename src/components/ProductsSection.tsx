@@ -16,7 +16,7 @@ import gingerPhoto from "@/assets/ginger-photo.png";
 import garlicPhoto from "@/assets/garlic-photo.png";
 import onionPhoto from "@/assets/onion-photo.png";
 
-import cavendishBanana from "@/assets/cavendish-banana.png";
+import cavendishBanana from "@/assets/banana-photo.png";
 
 interface Product {
   name: string;
@@ -37,7 +37,7 @@ interface Product {
 }
 
 const fruits: Product[] = [
-  { name: "Cavendish Bananas", emoji: "", icon: bananaIcon, photo: bananaPhoto, category: "Fresh Fruit", badge: "Signature Product", description: "The world's most beloved banana variety — grown in the fertile Philippine lowlands and processed with precision for peak shelf life and flavor. Our Cavendish bananas are harvested at optimal green maturity, ensuring maximum shelf life for both domestic and export markets.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Cavendish (AAA)", grade: "Grade A / Export Quality", harvestStage: "Green Mature", packaging: "13 kg & 3 kg Carton Box", tags: ["No pesticide residue", "Cold chain handled", "Consistent sizing", "Export certified"], bgColor: "#f5c518" },
+  { name: "Cavendish Bananas", emoji: "", icon: bananaIcon, photo: cavendishBanana, category: "Fresh Fruit", badge: "Signature Product", description: "The world's most beloved banana variety — grown in the fertile Philippine lowlands and processed with precision for peak shelf life and flavor. Our Cavendish bananas are harvested at optimal green maturity, ensuring maximum shelf life for both domestic and export markets.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Cavendish", grade: "Grade A / Export Quality", harvestStage: "Green Mature", packaging: "13 kg & 3 kg Carton Box", tags: ["No pesticide residue", "Cold chain handled", "Consistent sizing", "Export certified"], bgColor: "#f5c518" },
   { name: "Fresh Pineapple", emoji: "", icon: pineappleIcon, photo: pineapplePhoto, category: "Fresh Fruit", description: "Philippine pineapples are prized for their exceptional sweetness and juiciness. Grown in the tropical highlands, they offer a perfect balance of tangy and sweet flavors.", origin: "Bukidnon & South Cotabato", season: "Year-round", variety: "MD2 / Sweet Gold", grade: "Grade A", harvestStage: "Ripe Mature", packaging: "10 kg Carton Box", tags: ["Naturally sweet", "Rich in Vitamin C", "Export quality", "Farm fresh"], bgColor: "#e8a317" },
   { name: "Papaya", emoji: "", icon: papayaIcon, photo: papayaPhoto, category: "Fresh Fruit", description: "Philippine papayas are naturally sweet with vibrant orange flesh, packed with vitamins A and C. Perfect for fresh eating, smoothies, or as a natural meat tenderizer.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Solo / Red Lady", grade: "Grade A", harvestStage: "Turning Stage", packaging: "12 kg Carton Box", tags: ["Rich in enzymes", "Naturally ripened", "Consistent quality"], bgColor: "#f4a259" },
   { name: "Durian", emoji: "", icon: durianIcon, photo: durianPhoto, category: "Fresh Fruit", badge: "Premium", description: "Known as the 'King of Fruits,' Philippine durian from Davao is famous for its rich, custard-like flesh and distinctive aroma. A delicacy sought after across Asia.", origin: "Davao Region", season: "Aug–Oct & Dec–Feb", variety: "Puyat / Arancillo", grade: "Premium Grade", harvestStage: "Naturally Fallen", packaging: "Per piece / Crate", tags: ["Hand-selected", "Peak ripeness", "Davao origin"], bgColor: "#8b9a46" },
@@ -117,7 +117,7 @@ const ProductsSection = () => {
                 </span>
               )}
             {selectedProduct?.photo ? (
-                <img src={selectedProduct.photo} alt={selectedProduct.name} className="absolute inset-0 w-full h-full object-cover" />
+                <img src={selectedProduct.photo} alt={selectedProduct.name} className="absolute inset-0 w-full h-full object-cover object-center" />
               ) : selectedProduct?.icon ? (
                 <img src={selectedProduct.icon} alt={selectedProduct.name} className="w-32 h-32 sm:w-44 sm:h-44 object-contain drop-shadow-lg" />
               ) : (
