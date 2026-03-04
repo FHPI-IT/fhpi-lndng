@@ -16,6 +16,7 @@ import gingerPhoto from "@/assets/ginger-photo.png";
 import garlicPhoto from "@/assets/garlic-photo.png";
 import onionPhoto from "@/assets/onion-photo.png";
 import gingerIcon from "@/assets/ginger-icon.png";
+import garlicIcon from "@/assets/garlic-icon.png";
 
 import cavendishBanana from "@/assets/banana-photo.png";
 
@@ -47,7 +48,7 @@ const fruits: Product[] = [
 
 const spices: Product[] = [
   { name: "Ginger", emoji: "🫚", icon: gingerIcon, photo: gingerPhoto, category: "Spice", description: "Philippine ginger is renowned for its intense, spicy-sweet flavor. Used widely in cooking, beverages, and traditional medicine.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Yellow Ginger", grade: "Grade A", packaging: "20 kg Mesh Bag", tags: ["Organically grown", "High gingerol content", "Fresh harvest"], bgColor: "#d4a953" },
-  { name: "Garlic", emoji: "🧄", photo: garlicPhoto, category: "Spice", description: "Locally grown Philippine garlic is smaller but more pungent than imported varieties, delivering a robust flavor essential to Filipino cuisine.", origin: "Mindanao, Philippines", season: "January – March", variety: "Native White", grade: "Grade A", packaging: "10 kg Mesh Bag", tags: ["Locally sourced", "Strong aroma", "Sun-dried"], bgColor: "#e8dcc8" },
+  { name: "Garlic", emoji: "🧄", icon: garlicIcon, photo: garlicPhoto, category: "Spice", description: "Locally grown Philippine garlic is smaller but more pungent than imported varieties, delivering a robust flavor essential to Filipino cuisine.", origin: "Mindanao, Philippines", season: "January – March", variety: "Native White", grade: "Grade A", packaging: "10 kg Mesh Bag", tags: ["Locally sourced", "Strong aroma", "Sun-dried"], bgColor: "#e8dcc8" },
   { name: "Onion", emoji: "🧅", photo: onionPhoto, category: "Spice", description: "Philippine red and white onions add depth and aroma to dishes. Sourced from top-producing regions, they are a kitchen staple nationwide.", origin: "Mindanao, Philippines", season: "January – April", variety: "Red Creole / White", grade: "Grade A", packaging: "25 kg Mesh Bag", tags: ["Farm direct", "Consistent sizing", "Fresh harvest"], bgColor: "#a8516e" },
 ];
 
