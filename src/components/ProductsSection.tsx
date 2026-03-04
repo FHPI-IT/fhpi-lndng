@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Apple, Flower2 } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -68,6 +68,15 @@ const ProductsSection = () => {
   const { ref: fruitsRef, isVisible: fruitsVisible } = useScrollReveal();
   const { ref: spicesRef, isVisible: spicesVisible } = useScrollReveal();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  useEffect(() => {
+    [...fruits, ...spices].forEach((product) => {
+      if (product.photo) {
+        const img = new Image();
+        img.src = product.photo;
+      }
+    });
+  }, []);
 
   return (
     <section id="products" className="py-24 bg-background">
