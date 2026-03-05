@@ -91,10 +91,15 @@ const Contact = () => {
                   <h3 className="font-display font-semibold text-foreground mb-1">
                     Location
                   </h3>
-                  <p className="text-muted-foreground font-body">
+                  <a
+                    href="https://maps.google.com/?q=Fresh+Harvest+Philippines+Inc,+Matina+Town+Square,+MacArthur+Highway,+Matina,+Davao+City,+8000,+Philippines"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground font-body hover:text-primary transition-colors"
+                  >
                     2F Unit 5, Matina Town Square, MacArthur Highway, Matina,
                     Davao City, 8000, Philippines
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -105,9 +110,12 @@ const Contact = () => {
                   <h3 className="font-display font-semibold text-foreground mb-1">
                     Email
                   </h3>
-                  <p className="text-muted-foreground font-body">
+                  <a
+                    href="mailto:exports@freshharvestphil.com"
+                    className="text-muted-foreground font-body hover:text-primary transition-colors"
+                  >
                     exports@freshharvestphil.com
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -118,9 +126,12 @@ const Contact = () => {
                   <h3 className="font-display font-semibold text-foreground mb-1">
                     Phone
                   </h3>
-                  <p className="text-muted-foreground font-body">
+                  <a
+                    href="tel:+639177901184"
+                    className="text-muted-foreground font-body hover:text-primary transition-colors"
+                  >
                     +63 917 790 1184
-                  </p>
+                  </a>
                 </div>
               </div>
               
