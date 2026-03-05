@@ -29,8 +29,8 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div className="max-w-sm">
-            <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="Fresh Harvest Philippines" className="h-20 w-auto" />
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-white p-2">
+              <img src={logo} alt="Fresh Harvest Philippines" className="h-full w-auto" />
             </div>
             <p className="text-primary-foreground/70 font-body leading-relaxed">
               Supplying premium tropical fruits and spices from the heart of the Philippines to the world.
