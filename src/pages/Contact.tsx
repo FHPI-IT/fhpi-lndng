@@ -106,7 +106,7 @@ const Contact = () => {
                     Email
                   </h3>
                   <p className="text-muted-foreground font-body">
-                    rsensano@freshharvestphil.com
+                    exports@freshharvestphil.com
                   </p>
                 </div>
               </div>
@@ -122,6 +122,19 @@ const Contact = () => {
                     +63 917 790 1184
                   </p>
                 </div>
+              </div>
+              
+              {/* Google Map */}
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500!2d125.59730711286234!3d7.063056464000796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f96d74195086d5%3A0x98ad200ccae6dc02!2sFresh%20Harvest%20Philippines%2C%20Inc!5e1!3m2!1sen!2sph!4v1772673410155!5m2!1sen!2sph"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
 

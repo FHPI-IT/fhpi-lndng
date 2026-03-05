@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div className="max-w-sm">
             <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="Fresh Harvest Philippines" className="h-12 w-auto" />
+              <img src={logo} alt="Fresh Harvest Philippines" className="h-20 w-auto" />
             </div>
             <p className="text-primary-foreground/70 font-body leading-relaxed">
               Supplying premium tropical fruits and spices from the heart of the Philippines to the world.
@@ -25,7 +25,8 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-lg mb-4">Get in Touch</h4>
             <p className="text-primary-foreground/70 font-body leading-relaxed">Philippines
               <br />
-              rsensano@freshharvestphil.com
+              info@freshharvestphil.com <br />
+              exports@freshharvestphil.com
             </p>
           </div>
         </div>
