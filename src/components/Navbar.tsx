@@ -9,7 +9,7 @@ const Navbar = () => {
   const navLinks = [
     { to: "/#about", label: "About" },
     { to: "#products", label: "Products" },
-    { toDate: "/contact", label: "Contact" },
+    { to: "/contact", label: "Contact" },
   ];
 
   return (
