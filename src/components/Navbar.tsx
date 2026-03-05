@@ -7,24 +7,24 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const navLinks = [
-    { href: "/#about", label: "About" },
-    { href: "#products", label: "Products" },
-    { href: "/contact", label: "Contact" },
+    { to: "/#about", label: "About" },
+    { to: "#products", label: "Products" },
+    { toDate: "/contact", label: "Contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="/" className="flex items-center gap-2">
+        <link href="/" className="flex items-center gap-2">
           <img src={logo} alt="Fresh Harvest Philippines" className="h-20 w-auto" />
-        </a>
+        </link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 font-body text-sm font-medium">
           {navLinks.map((link) => (
             <a
-              key={link.href}
-              href={link.href}
+              key={link.to}
+              href={link.to}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
@@ -47,8 +47,8 @@ const Navbar = () => {
               <nav className="flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <a
-                    key={link.href}
-                    href={link.href}
+                    key={link.to}
+                    href={link.to}
                     className="text-foreground hover:text-primary transition-colors font-body font-medium"
                     onClick={() => setOpen(false)}
                   >
