@@ -1,6 +1,29 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/freshharvest-logo.svg";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+
+    if (href.startsWith("/#")) {
+      const sectionId = href.substring(2);
+      if (location.pathname === "/") {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/");
+        setTimeout(() => {
+          document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    } else {
+      navigate(href);
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <footer id="contact" className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4">
@@ -16,9 +39,9 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2 font-body text-primary-foreground/70">
-              <li><a href="/#about" className="hover:text-secondary transition-colors">About Us</a></li>
-              <li><a href="/#products" className="hover:text-secondary transition-colors">Products</a></li>
-              <li><a href="/contact" className="hover:text-secondary transition-colors">Contact</a></li>
+              <li><a href="/#about" onClick={(e) => handleNavClick(e, "/#about")} className="hover:text-secondary transition-colors">About Us</a></li>
+              <li><a href="/#products" onClick={(e) => handleNavClick(e, "/#products")} className="hover:text-secondary transition-colors">Products</a></li>
+              <li><a href="/contact" onClick={(e) => handleNavClick(e, "/contact")} className="hover:text-secondary transition-colors">Contact</a></li>
             </ul>
           </div>
           <div>
@@ -34,8 +57,8 @@ const Footer = () => {
           © {new Date().getFullYear()} Fresh Harvest Philippines, Inc. All rights reserved.
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 };
 
 export default Footer;
