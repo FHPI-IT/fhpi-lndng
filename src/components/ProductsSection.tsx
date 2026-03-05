@@ -2,24 +2,31 @@ import { useState, useEffect } from "react";
 import { Apple, Flower2 } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import durianIcon from "@/assets/durian-icon.png";
-import papayaIcon from "@/assets/papaya-icon.png";
-import bananaIcon from "@/assets/banana-icon.png";
-import pineappleIcon from "@/assets/pineapple-icon.png";
-import appleIcon from "@/assets/apple-icon.png";
-import bananaPhoto from "@/assets/cavendish-banana.jpg";
-import pineapplePhoto from "@/assets/pineapple-photo.png";
-import papayaPhoto from "@/assets/papaya-photo.png";
-import durianPhoto from "@/assets/durian-photo.png";
-import applePhoto from "@/assets/apple-photo.png";
-import gingerPhoto from "@/assets/ginger-photo.png";
-import garlicPhoto from "@/assets/garlic-photo.png";
-import onionPhoto from "@/assets/onion-photo.png";
-import gingerIcon from "@/assets/ginger-icon.png";
-import garlicIcon from "@/assets/garlic-icon.png";
-import onionIcon from "@/assets/onion-icon.png";
 
-import cavendishBanana from "@/assets/banana-photo.png";
+import bananaIcon from "@/assets/banana-icon.png";
+import bananaPhoto from "@/assets/banana-photo.webp";
+
+import pineappleIcon from "@/assets/pineapple-icon.png";
+import pineapplePhoto from "@/assets/pineapple-photo.webp";
+
+import papayaIcon from "@/assets/papaya-icon.png";
+import papayaPhoto from "@/assets/papaya-photo.webp";
+
+import durianIcon from "@/assets/durian-icon.png";
+import durianPhoto from "@/assets/durian-photo.webp";
+
+import appleIcon from "@/assets/apple-icon.png";
+import applePhoto from "@/assets/apple-photo.webp";
+
+import gingerIcon from "@/assets/ginger-icon.png";
+import gingerPhoto from "@/assets/ginger-photo.webp";
+
+import garlicIcon from "@/assets/garlic-icon.png";
+import garlicPhoto from "@/assets/garlic-photo.webp";
+
+import onionIcon from "@/assets/onion-icon.png";
+import onionPhoto from "@/assets/onion-photo.webp";
+
 
 interface Product {
   name: string;
@@ -40,7 +47,7 @@ interface Product {
 }
 
 const fruits: Product[] = [
-  { name: "Cavendish Bananas", emoji: "", icon: bananaIcon, photo: cavendishBanana, category: "Fresh Fruit", badge: "Signature Product", description: "The world's most beloved banana variety — grown in the fertile Philippine lowlands and processed with precision for peak shelf life and flavor. Our Cavendish bananas are harvested at optimal green maturity, ensuring maximum shelf life for both domestic and export markets.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Cavendish", grade: "Grade A / Export Quality", harvestStage: "Green Mature", packaging: "13 kg & 3 kg Carton Box", tags: ["No pesticide residue", "Cold chain handled", "Consistent sizing", "Export certified"], bgColor: "#f5c518" },
+  { name: "Cavendish Bananas", emoji: "", icon: bananaIcon, photo: bananaPhoto, category: "Fresh Fruit", badge: "Signature Product", description: "The world's most beloved banana variety — grown in the fertile Philippine lowlands and processed with precision for peak shelf life and flavor. Our Cavendish bananas are harvested at optimal green maturity, ensuring maximum shelf life for both domestic and export markets.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Cavendish", grade: "Grade A / Export Quality", harvestStage: "Green Mature", packaging: "13 kg & 3 kg Carton Box", tags: ["No pesticide residue", "Cold chain handled", "Consistent sizing", "Export certified"], bgColor: "#f5c518" },
   { name: "Fresh Pineapple", emoji: "", icon: pineappleIcon, photo: pineapplePhoto, category: "Fresh Fruit", description: "Philippine pineapples are prized for their exceptional sweetness and juiciness. Grown in the tropical highlands, they offer a perfect balance of tangy and sweet flavors.", origin: "Bukidnon & South Cotabato", season: "Year-round", variety: "MD2 / Sweet Gold", grade: "Grade A", harvestStage: "Ripe Mature", packaging: "10 kg Carton Box", tags: ["Naturally sweet", "Rich in Vitamin C", "Export quality", "Farm fresh"], bgColor: "#e8a317" },
   { name: "Papaya", emoji: "", icon: papayaIcon, photo: papayaPhoto, category: "Fresh Fruit", description: "Philippine papayas are naturally sweet with vibrant orange flesh, packed with vitamins A and C. Perfect for fresh eating, smoothies, or as a natural meat tenderizer.", origin: "Mindanao, Philippines", season: "Year-round", variety: "Solo / Red Lady", grade: "Grade A", harvestStage: "Turning Stage", packaging: "12 kg Carton Box", tags: ["Rich in enzymes", "Naturally ripened", "Consistent quality"], bgColor: "#f4a259" },
   { name: "Durian", emoji: "", icon: durianIcon, photo: durianPhoto, category: "Fresh Fruit", badge: "Premium", description: "Known as the 'King of Fruits,' Philippine durian from Davao is famous for its rich, custard-like flesh and distinctive aroma. A delicacy sought after across Asia.", origin: "Davao Region", season: "Aug–Oct & Dec–Feb", variety: "Puyat / Arancillo", grade: "Premium Grade", harvestStage: "Naturally Fallen", packaging: "Per piece / Crate", tags: ["Hand-selected", "Peak ripeness", "Davao origin"], bgColor: "#8b9a46" },
