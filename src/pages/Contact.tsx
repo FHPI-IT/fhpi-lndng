@@ -5,8 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Phone, MailWarning  } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useToast } from "@/hooks/use-toast";
+
+const TURNSTILE_SITE_KEY = "0x4AAAAAACnOaCpbD7wxGIAJ";
 
 interface ContactFormData {
   name: string;
@@ -28,9 +30,46 @@ const Contact = () => {
   });
 
   const [isLoading, setIsLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<HTMLDivElement>(null);
+
+  const renderTurnstile = useCallback(() => {
+    if (turnstileRef.current && (window as any).turnstile) {
+      turnstileRef.current.innerHTML = "";
+      (window as any).turnstile.render(turnstileRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback: (token: string) => setTurnstileToken(token),
+        "expired-callback": () => setTurnstileToken(null),
+        theme: "auto",
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if ((window as any).turnstile) {
+      renderTurnstile();
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+    script.async = true;
+    script.onload = () => renderTurnstile();
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [renderTurnstile]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!turnstileToken) {
+      toast({
+        title: "Verification Required",
+        description: "Please complete the verification challenge before sending.",
+        variant: "destructive",
+      });
+      return;
+    }
     setIsLoading(true);
     try {
       const response = await fetch(GOOGLE_SCRIPT_URL, {
@@ -49,6 +88,8 @@ const Contact = () => {
         });
 
         setFormData({ name: "", email: "", subject: "", message: "" });
+        setTurnstileToken(null);
+        renderTurnstile();
       } else {
         throw new Error("Submission failed");
       }
@@ -204,7 +245,8 @@ const Contact = () => {
                   rows={5}
                 />
               </div>
-              <Button type="submit" className="w-full" size="lg" disabled={isLoading}>
+              <div ref={turnstileRef} className="flex justify-center" />
+              <Button type="submit" className="w-full" size="lg" disabled={isLoading || !turnstileToken}>
                 {isLoading ? "Sending..." : "Send Message"}
               </Button>
             </form>
