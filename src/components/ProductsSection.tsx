@@ -76,6 +76,8 @@ const ProductsSection = () => {
   const { ref: fruitsRef, isVisible: fruitsVisible } = useScrollReveal();
   const { ref: spicesRef, isVisible: spicesVisible } = useScrollReveal();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     [...fruits, ...spices].forEach((product) => {
