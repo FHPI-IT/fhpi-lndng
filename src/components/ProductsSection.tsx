@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Apple, Flower2 } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -75,6 +76,8 @@ const ProductsSection = () => {
   const { ref: fruitsRef, isVisible: fruitsVisible } = useScrollReveal();
   const { ref: spicesRef, isVisible: spicesVisible } = useScrollReveal();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     [...fruits, ...spices].forEach((product) => {
@@ -213,7 +216,12 @@ const ProductsSection = () => {
                 </div>
                 <a
                   href="/contact"
-                  onClick={() => setSelectedProduct(null)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedProduct(null);
+                    navigate("/contact");
+                    window.scrollTo(0, 0);
+                  }}
                   className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold transition-colors"
                   style={{ backgroundColor: '#109a48', color: '#faf9f5' }}
                 >
